@@ -2,9 +2,19 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Scan Barcode</h1>
-            {{input type="text" placeholder="X XXXXXX XXXXXX"}}
-            <button class="btn btn-primary" {{action 'acceptBarcode'}}>Lookup</button>
-          {{outlet}}
+
+            <p>
+                <!--{{paper-text label="Barcode" value=name}}-->
+              {{input type="text" placeholder="X XXXXXX XXXXXX"}}
+            </p>
+
+            <p>
+              {{#paper-button raised=true classNames="paper-primary" action='acceptBarcode'}}Lookup{{/paper-button}}
+            </p>
+
+            <p>
+              {{outlet}}
+            </p>
         </div>
     </div>
 </div>

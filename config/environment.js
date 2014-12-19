@@ -46,6 +46,13 @@ module.exports = function(environment) {
       // when it is created
     },
 
+    contentSecurityPolicy: {
+      'style-src' : "'self' 'unsafe-inline'",
+      'font-src': "'self' https://fonts.gstatic.com/s/robotodraft/v2/ https://fonts.gstatic.com/s/robotodraft/v1/",
+      'img-src': "'self' http://www.fillmurray.com/200/200 http://www.gravatar.com/avatar/"
+    },
+
+
     cordova: {
       rebuildOnChange: false,
       emulate: false,

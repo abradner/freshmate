@@ -1,7 +1,24 @@
-<h1>Welcome to ember-cli-cordova!</h1>
-
 {{!liquid-outlet name="main"}}
 
 {{!liquid-outlet modal}}
 
-{{outlet name="main"}}
+<div class="sidenav-static-content">
+  {{outlet name="main"}}
+</div>
+{{#paper-sidenav}}
+  {{#paper-drawer}}
+
+      <h1 class="logo"><img src="ember-logo.png" height="30"/>  <strong>Paper</strong></h1>
+      <nav class="sidenav-nav">
+          <ul>
+              <li>{{#link-to "default"}}Typography{{/link-to}}</li>
+          </ul>
+      </nav>
+
+  {{/paper-drawer}}
+  {{#paper-content}}
+
+    {{outlet}}
+
+  {{/paper-content}}
+{{/paper-sidenav}}
